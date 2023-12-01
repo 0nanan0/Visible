@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#aside {
+    width: 200px;
+}
+
+#aside .logo {
+    width: 100%;
+    height: 100px;
+    background: #efefef;
+}
+#aside .nav {
+    height: 550px;
+    background-color: #e3e3e3;
+}
+#main {
+    width: calc(100% - 200px);
+}
+#slider {
+    width: 100%;
+    display: flex;
+}
+#slider .image {
+    width: calc(100% - 230px);
+    height: 400px;
+    background-color: #d9d9d9;
+}
+#slider .banner {
+    width: 230px;
+    height: 400px;
+    background-color: #d1d1d1;
+}
+#contents {
+    width: 100%;
+    display: flex;
+}
+#contents .content1 {
+    width: 50%;
+    height: 250px;
+    background-color: #c7c7c7;
+}
+#contents .content2 {
+    width: 50%;
+    height: 250px;
+    background-color: #bcbcbc;
+}
+#footer {
+    width: 100%;
+    display: flex;
+}
+#footer .footer1 {
+    width: 20%;
+    height: 100px;
+    background-color: #b1b1b1;
+}
+#footer .footer2 {
+    width: 60%;
+    height: 100px;
+    background-color: #a3a3a3;
+}
+#footer .footer3 {
+    width: 20%;
+    height: 100px;
+    background-color: #9d9d9d;
+}
+
+/* nav */
+nav > ul > li > a {
+    display: block;
+    padding: 10px;
+    background-color: #ccc;
+    text-align: center;
+}
+nav > ul > li > a:hover {
+    background-color: #9c9c9c;
+}
+nav > ul > li > ul {
+    display: none;
+}
+nav > ul > li > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+nav > ul > li > ul > li > a:hover {
+    background-color: #c0c0c0;
+}
+
+
+/* slider */
+#slider {
+    overflow: hidden;
+}
+.sliderWrap {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+.sliderWrap .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sliderWrap .slider.s1 {
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider04.jpg);
+}
+.sliderWrap .slider.s2 {
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider05.jpg);
+}
+.sliderWrap .slider.s3 {
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider06.jpg);
+}
+.sliderWrap .slider span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0.4);
+    padding: 10px 20px;
+}

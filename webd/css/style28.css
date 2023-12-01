@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "맑은 고딕", sans-serif;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+
+.cf:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+
+    float: left;
+    /* float: right; */
+}
+#header {
+    width: 100%;
+    display: flex;
+    /* float: left; */
+    /* float: right; */
+}
+#header .logo {
+    width: 20%;
+    height: 100px;
+    background-color: #efefef;
+}
+#header .nav {
+    width: 80%;
+    height: 100px;
+    background-color: #e3e3e3;
+}
+#slider {
+    width: 100%;
+    height: 300px;
+    background-color: #d9d9d9;
+}
+#contents {
+    width: 100%;
+    display: flex;
+}
+#contents .content1 {
+    width: 33.3333%;
+    height: 200px;
+    background-color: #d1d1d1;
+}
+#contents .content2 {
+    width: 33.3333%;
+    height: 200px;
+    background-color: #c7c7c7;
+}
+#contents .content3 {
+    width: 33.3333%;
+    height: 200px;
+    background-color: #bcbcbc;
+}
+#footer {
+    width: 100%;
+    display: flex;
+}
+#footer .footer1 {
+    width: 20%;
+    height: 100px;
+    background-color: #b1b1b1;
+}
+#footer .footer2 {
+    width: 60%;
+    height: 100px;
+    background-color: #a3a3a3;
+}
+#footer .footer3 {
+    width: 20%;
+    height: 100px;
+    background-color: #9d9d9d;
+}
+
+
+.sliderWrap {
+    display: flex;
+}
+
+.sliderWrap .slider {
+    position: relative;
+}
+
+/* 이미지 */
+.sliderWrap .slider img {
+    vertical-align: top;
+
+}
+
+/* 글씨 */
+.sliderWrap .slider span {   
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: coral; */
+    padding: 10px 20px;
+}
+
+/* .sliderWrap > div {
+    display: none;
+}
+
+.sliderWrap > div:first-child {
+    display: block;
+} */
