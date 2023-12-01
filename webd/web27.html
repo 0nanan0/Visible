@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 S-1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            display: flex;
+        }
+        #header .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #efefef;
+        }
+        #header .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #e3e3e3;
+        }
+        #slider {
+            width: 100%;
+            height: 300px;
+            background-color: #d9d9d9;
+        }
+        #contents {
+            width: 100%;
+            display: flex;
+        }
+        #contents .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #d1d1d1;
+        }
+        #contents .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #c7c7c7;
+        }
+        #contents .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #bcbcbc;
+        }
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #b1b1b1;
+        }
+        #footer .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #a3a3a3;
+        }
+        #footer .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #9d9d9d;
+        }
+
+        .sliderWrap {
+            position: relative;
+        }
+
+        .sliderWrap .subs {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .sliderWrap .subs img {   /* 이미지 */
+            vertical-align: top;    /* 여백때문에 */
+        }
+
+        .sliderWrap .subs span {  /* 글씨 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* background-color: coral; */
+            padding: 10px 20px;
+        }
+
+        .sliderWrap > div {
+            display: none;
+        }
+
+        .sliderWrap > div:first-child {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </header>
+        <!-- //header -->
+
+        <article id="slider">
+            <div class="sliderWrap">
+                <div class="subs s1">
+                    <img src="imgs/d96faecd7cfd11b.png" alt="이미지 설명1">
+                    <span>이미지1</span>
+                </div>
+                <div class="subs s2">
+                    <img src="imgs/msdfain.png" alt="이미지 설명2">
+                    <span>이미지2</span>
+                </div>
+                <div class="subs s3">
+                    <img src="imgs/말하기전에.png" alt="이미지 설명3">
+                    <span>이미지3</span>
+                </div>
+            </div>
+        </article>
+        <!-- //slider -->
+
+        <main id="contents">
+            <section class="content1"></section>
+            <section class="content2"></section>
+            <section class="content3"></section>
+        </main>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            let currentIndex = 0;   // 내가 보고있는 이미지
+            setInterval(function(){
+              
+                let nextIndex = (currentIndex+1)%3;
+                $(".subs").eq(nextIndex).fadeIn();
+                $(".subs").eq(currentIndex).fadeOut();
+
+                // console.log("cur : "+currentIndex + " / nex : "+nextIndex);
+                // currentIndex++;
+                currentIndex = nextIndex;
+                
+            }, 3000);
+
+        });
+    </script>
+</body>
+</html>
